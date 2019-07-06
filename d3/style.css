@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+h1, h2 {
+  text-align: center;
+  line-height: 1.5;
+  color: hotpink;
+}
+h1 {
+  font-size: 3em;
+  text-shadow: 0.1em 0.1em 0.1em pink;
+}
+h2 {
+  font-size: 2em;
+}
+dl, h3 {
+  color: pink;
+  line-height: 1.5;
+  text-align: center;
+}
+dt {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+dd {
+  display: inline-block;
+  margin-right: 1em;
+  text-decoration: underline;
+}
+dd + dt::before {
+  content: "|" ;
+  padding-right: 1em;
+}

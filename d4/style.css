@@ -13,7 +13,8 @@ h1, h2 {
 h1 {
   font-size: 3em;
   text-shadow: 0.1em 0.1em 0.1em pink;
-  background: #FFFFCC;
+  background-color: #FFFFCC;
+  border: 0.1em dashed hotpink;
 }
 h2 {
   font-size: 2em;
@@ -31,9 +32,30 @@ dt {
 dd {
   display: inline-block;
   margin-right: 1em;
-  text-decoration: underline;
 }
 dd + dt::before {
   content: "|" ;
   padding-right: 1em;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: pink;
+  border-bottom: 0.1em solid;
+}
+a:visited {
+  color: gray;
+  border-bottom: 0.1em solid;
+}
+a:focus {
+  border-bottom: 0.1em solid;
+}
+a:hover {
+  border-bottom: 0.1em solid;
+  background: #FFFFCC;
+}
+a:active {
+  color: #FFFFCC;
+  background: pink;
 }

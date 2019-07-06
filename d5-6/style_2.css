@@ -1,5 +1,6 @@
 html {
 	font-size: 10px;
+	height: 100%
 }
 * {
 	margin: 0;
@@ -10,8 +11,17 @@ h1, h2 {
 }
 h1 {
 	font-size: 3em;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em; /*15px*/
+}
+body {
+	height: 100%;
+}
+body > div:first-child {
+	box-sizing: border-box;
+	padding: 3em;
+	height: 100%;
+	float: left;
+	color: white;
+	background-color: #65a5fa;
 }
 h2 {
 	font-size: 2em;

@@ -1,0 +1,51 @@
+html {
+	font-size: 10px;
+	height: 100%
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 标题 */
+h1 {
+	font-size: 3em;
+}
+body > div:first-child {
+	padding: 3em;
+	color: white;
+	background-color: #858585;
+}
+
+/* parts */
+h2 {
+	font-size: 2em;
+	background-color: #d6d6d6;
+	height: 5em;
+	width: 5em;
+	line-height: 5em;
+	padding: 1em;
+	border: 0.1px solid white;
+}
+.parts {
+	display: flex;
+	border: 0.1px solid #d6d6d6;
+}
+
+/* dt dd */
+dt, dd {
+	font-size: 1.5em;
+	display: inline-block;
+}
+dt {
+	font-weight: bold;
+}
+dl > dt {
+	padding-right: 0.5em; /*7.5px*/
+}
+dl > dd {
+	padding-right: 1em; /*15px*/
+}
+dl {
+	padding: 1em; /*10px*/
+}

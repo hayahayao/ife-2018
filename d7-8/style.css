@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* head */
+.head-wrap {
+	width: 100%;
+	height: 82px;
+	background-color: #333333;
+}
+.head-content {
+	position: relative;
+	width: 960px;
+	height: 82px;
+	margin: 0 auto;
+}
+.logo {
+	position: absolute;
+	left: 0;
+	height: 82px;
+	line-height: 82px;
+	font-size: 20px;
+	color: #ffffff;
+}
+.nav-link {
+	position: absolute;
+	right: 0;
+	list-style-type: none;
+}
+.nav-link li {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 100%;
+}
+.nav-link li a:link {
+	color: #ffffff;
+}
+
+/* banner */
+.banner-wrap {
+	width: 100%;
+	height: 301px;
+	background-color: #66bb33;
+}
+.banner-content {
+	position: relative;
+	width: 960px;
+	height: 301px;
+	margin: 0 auto;
+}
+.nav-img {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	list-style-type: none; 
+}
+.nav-img li {
+	display: inline-block;
+	width: 28px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.nav-img .focus {
+	height: 50px;
+	line-height: 65px;
+	background-color: rgba(255, 255, 255, 1);
+
+}
+
+/* main navigation */
+.navigation-wrap {
+	width: 100%;
+	height: 75px;
+	border-bottom: 1px solid #dddddd;
+}
+.navigation-content {
+	position: relative;
+	width: 960px;
+	height: 75px;
+	margin: 0 auto;
+}
+.nav-main {
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	list-style-type: none;
+	font-size: 0;
+}
+.nav-main li {
+	display: inline-block;
+	width: 116px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #dddddd;
+	border-bottom: 1px solid #ffffff;
+	border-radius: 25% 25% 0 0;
+	color: #000000;
+	background-color: #eeeeee;
+	font-size: 13px;
+}
+.nav-main .focus {
+	background-color: #ffffff;
+}
+
+/* main */
+.main-wrap {
+	width: 100%;
+	height: 100%;
+}
+.main-content {
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+}
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	list-style-type: none;
+	margin: 5px;
+}
+.content li {
+	display: inline-block;
+	flex: auto;
+	padding: 80px;
+	margin: 5px;
+	text-align: center;
+	border: 1px solid #dddddd;
+}
+
+/* footer */
+.footer-wrap {
+	width: 100%;
+	height: 120px;
+	background-color: #666666;
+}
+.footer-content {
+	width: 960px;
+	height: 120px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50px;
+	color: #ffffff;
+}

@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 输入框 */
+.inputbox {
+	height: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	background-color: rgba(0, 0, 0, 0);
+}
+/* 按钮 */
+.button-focus {
+	height: 50px;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	background-color: #fff;
+	padding: 0 37px;
+}
+/* 文字：light字体 大写 */
+.light-upper {
+	font-family: "Montserrat";
+	font-weight: 300;
+	text-transform: uppercase;
+}
+/* 文字：extralight字体 */
+.extralight {
+	font-family: "Montserrat";
+	font-weight: 200;
+}
+.white {
+	color: #fff;
+}
+.black {
+	color: #000;
+}
+/* 设置绝对定位元素水平居中 */
+.align-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+/* header */
+header {
+	position: relative;
+	width: 100%;
+	padding-bottom: 61.875%;
+	background-image: url("./images/前端学院设计图_01.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+h1 {
+	position: absolute;
+	top: 201px;
+	font-size: 62px;
+}
+#header-text {
+	position: absolute;
+	top: 339px;
+	width: 767.92px;
+	height: 169.98px;
+	text-align: center;
+	font-size: 20px;
+}
+#signup {
+	position: absolute;
+	top: 530px;
+	width: 970px;
+	height: 250px;
+}
+#signup-text1 {
+	position: absolute;
+	top: 59px;
+}
+#signup-text2 {
+	position: absolute;
+	top: 91px;
+	color: rgba(255, 255, 255, 0.3);
+}
+#signup-form {
+	position: absolute;
+	top: 148px;
+	width: 769px;
+	display: flex;
+	justify-content: space-between;
+}
+#signup-email {
+	width: 292px;
+	padding: 0 19px;
+	box-sizing: border-box;
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+}
+#signup-password {
+	width: 292px;
+	padding: 0 19px;
+	box-sizing: border-box;
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.3);
+}

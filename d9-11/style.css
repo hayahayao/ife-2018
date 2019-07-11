@@ -23,6 +23,10 @@
 	font-weight: 300;
 	text-transform: uppercase;
 }
+.light {
+	font-family: "Montserrat";
+	font-weight: 300;
+}
 /* 文字：extralight字体 */
 .extralight {
 	font-family: "Montserrat";
@@ -39,17 +43,23 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+/* feature页面统一设置 */
+.feature {
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+}
 
 body {
 	width: 100%;
 	height: 100%;
 }
-/* header */
+/* header 1600*990 */
 header {
 	position: relative;
 	width: 100%;
 	padding-bottom: 61.875%;
-	background-image: url("./images/前端学院设计图_01.png");
+	background-image: url("./images/header-background.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -105,4 +115,56 @@ h1 {
 	font-weight: 300;
 	font-size: 14px;
 	color: rgba(255, 255, 255, 0.3);
+}
+
+/* feature 1 1600*710 */
+#feature1 {
+	position: relative;
+	width: 100%;
+	padding-bottom: 44.375%;
+}
+#feature1-text {
+	position: absolute;
+	top: 87px;
+	font-size: 14px;
+}
+#feature1-title {
+	position: absolute;
+	top: 133px;
+	width: 770.97px;
+	height: 95.24px;
+	font-size: 42px;
+	text-align: center;
+}
+#feature1-features {
+	position: absolute;
+	top: 317px;
+	width: 1036px;
+	height: 277px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	list-style-type: none;
+}
+#feature1-features li {
+	display: inline-block;
+}
+#feature1-features li h3 {
+	margin-bottom: 40px;
+	margin-left: 80px;
+	font-size: 20px;
+}
+#feature1-features li p {
+	margin-left: 80px;
+	width: 370px;
+	font-size: 16px;
+}
+#feature1-features li div {
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+#feature1-features li div img {
+	float: right;
 }

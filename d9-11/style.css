@@ -55,8 +55,10 @@
 /* feature页面统一设置 */
 .feature {
 	position: relative;
-	width: 100%;
+	width: 1600px;
 	background-color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-sizing: border-box;
 }
 
 body {
@@ -222,4 +224,38 @@ h1 {
 	width: 240px;
 	height: 60px;
 	font-size: 12px;
+}
+
+/* feature2 1600*580 */
+#feature2 {
+	padding-bottom: 36.25%;
+}
+#feature2-title {
+	position: absolute;
+	top: 92px;
+	font-size: 42px;
+}
+#feature2-features {
+	position: absolute;
+	top: 226px;
+	width: 961px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+#feature2-features li {
+	display: inline-block;
+	width: 268.15px;
+}
+#feature2-features li p {
+	margin-top: 38px;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	word-wrap: break-word;
+}
+#feature2-features li img {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }

@@ -16,6 +16,15 @@
 	border-radius: 2px;
 	background-color: #fff;
 	padding: 0 37px;
+	color: #000;
+}
+.button-unfocus {
+	height: 50px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	background-color: rgba(0, 0, 0, 0);
+	padding: 0 37px;
+	color: #fff;
 }
 /* 文字：light字体 大写 */
 .light-upper {
@@ -57,7 +66,7 @@ body {
 /* header 1600*990 */
 header {
 	position: relative;
-	width: 100%;
+	width: 1600px;
 	padding-bottom: 61.875%;
 	background-image: url("./images/header-background.png");
 	background-repeat: no-repeat;
@@ -75,6 +84,7 @@ h1 {
 	height: 169.98px;
 	text-align: center;
 	font-size: 20px;
+	line-height: 32px;
 }
 #signup {
 	position: absolute;
@@ -120,13 +130,14 @@ h1 {
 /* feature 1 1600*710 */
 #feature1 {
 	position: relative;
-	width: 100%;
+	width: 1600px;
 	padding-bottom: 44.375%;
 }
 #feature1-text {
 	position: absolute;
 	top: 87px;
 	font-size: 14px;
+	line-height: 28px;
 }
 #feature1-title {
 	position: absolute;
@@ -145,13 +156,15 @@ h1 {
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-content: space-between;
 	list-style-type: none;
 }
 #feature1-features li {
 	display: inline-block;
+	flex-basis: 40%;
 }
 #feature1-features li h3 {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	margin-left: 80px;
 	font-size: 20px;
 }
@@ -159,6 +172,7 @@ h1 {
 	margin-left: 80px;
 	width: 370px;
 	font-size: 16px;
+	line-height: 26px;
 }
 #feature1-features li div {
 	float: left;
@@ -167,4 +181,45 @@ h1 {
 }
 #feature1-features li div img {
 	float: right;
+}
+
+/* call to action 1600*800 */
+#call-to-action {
+	position: relative;
+	width: 1600px;
+	padding-bottom: 50%;
+	background-image: url("./images/call-background.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#call-title {
+	position: absolute;
+	left: 315px;
+	top: 176px;
+	width: 400px;
+	font-size: 42px;
+	line-height: 52px;
+}
+#call-text {
+	position: absolute;
+	left: 315px;
+	top: 364px;
+	width: 369.44px;
+	font-size: 18px;
+	line-height: 28px;
+	word-wrap: break-word;
+}
+#call-form {
+	position: absolute;
+	left: 315px;
+	top: 554px;
+	width: 510px;
+	display: flex;
+	justify-content: space-between;
+}
+#call-form button {
+	box-sizing: border-box;
+	width: 240px;
+	height: 60px;
+	font-size: 12px;
 }

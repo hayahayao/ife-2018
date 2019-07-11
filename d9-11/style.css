@@ -88,7 +88,7 @@ h1 {
 	font-size: 20px;
 	line-height: 32px;
 }
-#signup {
+#signup-box {
 	position: absolute;
 	top: 530px;
 	width: 970px;
@@ -392,4 +392,90 @@ h1 {
 }
 #team-focus ul li img {
 	vertical-align: middle;
+}
+
+/* contant 1600*700 */
+#contact {
+	padding-bottom: 43.75%;
+}
+#contacts-container {
+	position: absolute;
+	left: 912px;
+	top: 149px;
+}
+#contact-title {
+	font-size: 42px;
+}
+#contact-text {
+	position: absolute;
+	top: 74px;
+	width: 370px;
+	font-size: 16px;
+	line-height: 26px;
+}
+#contact-contacts {
+	position: absolute;
+	top: 344px;
+	width: 263px;
+	list-style-type: none;
+}
+#contact-contacts li {
+	display: inline-block;
+}
+#contact-contacts li p {
+	margin-left: 42px;
+	margin-bottom: 39px;
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 26px;
+	color: #000;
+}
+#contact-contacts li img {
+	float: left;
+}
+#contact-box {
+	position: absolute;
+	left: 315px;
+	top: 70px;
+	width: 470px;
+	height: 560px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+#contact-box-text {
+	position: absolute;
+	top: 53px;
+}
+#contact-form {
+	position: absolute;
+	top: 110px;
+	width: 370px;
+	height: 384px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#contact-form input,
+#contact-form textarea {
+	width: 370px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+	font-family: "Montserrat";
+	font-weight: 300;
+	color: rgba(0, 0, 0, 0.5);
+}
+#contact-form input {
+	height: 50px;
+	line-height: 50px;
+}
+#contact-form textarea {
+	height: 144px;
+	padding-top: 18px;
+}
+#contact-form button {
+	width: 370px;
+	background-color: #000;
+	border: 1px solid #000;
 }

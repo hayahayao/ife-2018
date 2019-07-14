@@ -1,6 +1,8 @@
 * {
 	padding: 0;
 	margin: 0;
+	border: 0;
+	background: transparent;
 	font-size: 0;
 }
 html,
@@ -170,4 +172,60 @@ a {
 #secondary #server div:last-of-type {
 	width: 40px;
 	background-image: linear-gradient(#7f5be6, #9d8fe3);
+}
+
+/* 右侧白色，自适应宽度 */
+#messages {
+	position: relative;
+	width: calc(100%-100px-250px);
+	height: 100%;
+	background-color: #fff;
+}
+#messages h1 {
+	position: fixed;
+	top: 25px;
+	left: 380px;
+	font-size: 24px;
+	font-weight: normal;
+	color: #354052;
+}
+#profile {
+	position: fixed;
+	right: 0;
+	height: 80px;
+}
+#profile img {
+	position: absolute;
+	top: 14px;
+	right: 180px;
+}
+#profile img:first-of-type {
+	top: 47px;
+	right: 183px;
+}
+#profile p {
+	position: absolute;
+	right: 85px;
+	width: 85px;
+
+}
+#profile p:first-of-type {
+	top: 20px;
+	color: #2399f1;
+	font-size: 16px;
+}
+#profile p:last-of-type {
+	top: 42px;
+	color: #b5b5b5;
+	font-size: 14px;
+}
+#profile button {
+	position: absolute;
+	right: 30px;
+	top: 35px;
+	width: 11px;
+	height: 7px;
+	cursor: pointer;
+	background-image: url("./img/pro-button.png");
+	background-repeat: no-repeat;
 }

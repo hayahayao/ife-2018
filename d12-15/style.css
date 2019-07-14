@@ -1,0 +1,173 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 1100px;
+}
+body {
+	display: flex;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* primary 固定宽度100 高度自适应 */
+#primary {
+	position: relative;
+	width: 100px;
+	height: 100%;
+	background-color: #1d2531;
+}
+#items {
+	position: fixed;
+	top: 20px;
+	width: 80px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#items a {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	padding-left: 20px;
+	display: block;
+}
+#items a img {
+	position: absolute;
+}
+#items a img:last-child {
+	left: 50px;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+#item a:link,
+#item a:visited {}
+#items a:hover,
+#items a:active {
+	background: url("./img/pri-active.png") no-repeat border-box 0px;
+}
+#actions {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	width: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* secondary 固定宽度250 高度自适应 */
+#secondary {
+	position: relative;
+	width: 250px;
+	height: 100%;
+	background-color: #222c3c;
+}
+#secondary div {
+	position: relative;
+	margin-right: 30px;
+}
+#secondary div p:first-child {
+	margin-bottom: 39px;
+	margin-left: 30px;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #5b6779;
+	font-size: 12px;
+}
+#secondary div>a {
+	float: right;
+}
+#secondary div li {
+	padding-left: 30px;
+	margin-bottom: 26px;
+}
+#secondary div li:last-child {
+	margin-bottom: 30px;
+}
+#secondary div li a {
+	color: #b7c0cd;
+	font-size: 14px;
+}
+#secondary div li img {
+	margin-right: 10px;
+}
+#secondary .notification,
+#secondary .alert {
+	display: inline-block;
+	margin: 0;
+	padding: 0 10px;
+	height: 24px;
+	float: right;
+	line-height: 24px;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 12px;
+}
+#secondary .notification {
+	background-color: #1991eb;
+}
+#secondary .alert {
+	background-color: #f45438;
+}
+#secondary div li:link,
+#secondary div li:visited {}
+#secondary div li:hover,
+#secondary div li:active {
+	background: url("./img/pri-active.png") no-repeat border-box 0px;
+}
+#secondary>div:nth-child(1) {
+	top: 32px;
+	border-bottom: 1px solid #2a3547;
+}
+#secondary>div:nth-child(2) {
+	top: 60px;
+	border-bottom: 1px solid #2a3547;
+}
+#secondary>div:nth-child(3) {
+	top: 88px;
+}
+#secondary #server {
+	position: fixed;
+	bottom: 30px;
+	margin: 0 30px;
+	width: 190px;
+	height: 30px;
+}
+#secondary #server p {
+	position: absolute;
+	display: inline-block;
+	margin: 0;
+	text-transform: none;
+	font-size: 14px;
+	color: #fff;
+}
+#secondary #server p:first-of-type {
+	left: 0;
+}
+#secondary #server p:last-of-type {
+	right: 0;
+}
+#secondary #server div {
+	position: absolute;
+	bottom: 0;
+	height: 4px;
+	margin: 0;
+}
+#secondary #server div:first-of-type {
+	width: 190px;
+	background-color: #475364;
+}
+#secondary #server div:last-of-type {
+	width: 40px;
+	background-image: linear-gradient(#7f5be6, #9d8fe3);
+}

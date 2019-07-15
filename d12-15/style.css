@@ -21,6 +21,25 @@ a {
 	text-decoration: none;
 }
 
+.notification,
+.alert {
+	display: inline-block;
+	margin: 0;
+	padding: 0 10px;
+	height: 24px;
+	float: right;
+	line-height: 24px;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 12px;
+}
+.notification {
+	background-color: #1991eb;
+}
+.alert {
+	background-color: #f45438;
+}
+
 /* primary 固定宽度100 高度自适应 */
 #primary {
 	position: relative;
@@ -105,21 +124,7 @@ a {
 }
 #secondary .notification,
 #secondary .alert {
-	display: inline-block;
-	margin: 0;
-	padding: 0 10px;
-	height: 24px;
-	float: right;
-	line-height: 24px;
-	color: #fff;
-	font-size: 14px;
-	border-radius: 12px;
-}
-#secondary .notification {
-	background-color: #1991eb;
-}
-#secondary .alert {
-	background-color: #f45438;
+	margin-right: 0;
 }
 #secondary div li:link,
 #secondary div li:visited {}
@@ -140,10 +145,13 @@ a {
 }
 #secondary #server {
 	position: fixed;
-	bottom: 30px;
-	margin: 0 30px;
-	width: 190px;
-	height: 30px;
+	bottom: 0;
+	padding: 0 30px;
+	width: 250px;
+	height: 60px;
+	box-sizing: border-box;
+	background-color: #222c3c;
+	border: 1px solid #2a3547;
 }
 #secondary #server p {
 	position: absolute;
@@ -154,14 +162,14 @@ a {
 	color: #fff;
 }
 #secondary #server p:first-of-type {
-	left: 0;
+	left: 30px;
 }
 #secondary #server p:last-of-type {
-	right: 0;
+	right: 30px;
 }
 #secondary #server div {
 	position: absolute;
-	bottom: 0;
+	bottom: 20px;
 	height: 4px;
 	margin: 0;
 }
@@ -177,21 +185,31 @@ a {
 /* 右侧白色，自适应宽度 */
 #messages {
 	position: relative;
-	width: calc(100%-100px-250px);
+	width: calc(100% - 100px - 250px);
 	height: 100%;
 	background-color: #fff;
 }
 #messages h1 {
-	position: fixed;
+	position: absolute;
 	top: 25px;
-	left: 380px;
+	left: 30px;
 	font-size: 24px;
 	font-weight: normal;
 	color: #354052;
 }
-#profile {
+#messages #topbar {
 	position: fixed;
-	right: 0;
+	width: inherit;
+	height: 80px;
+	box-sizing: border-box;
+	border: 1px solid #e6e9ec;
+	background-color: #fff;
+	z-index: 1;
+}
+#profile {
+	position: relative;
+	margin-left: calc(100% - 230px);
+	width: 230px;
 	height: 80px;
 }
 #profile img {
@@ -207,7 +225,6 @@ a {
 	position: absolute;
 	right: 85px;
 	width: 85px;
-
 }
 #profile p:first-of-type {
 	top: 20px;
@@ -227,5 +244,89 @@ a {
 	height: 7px;
 	cursor: pointer;
 	background-image: url("./img/pro-button.png");
-	background-repeat: no-repeat;
+}
+
+/* chats 宽度固定400 */
+#chats {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 400px;
+	height: calc(100% - 80px);
+	box-sizing: border-box;
+	border-right: 1px solid #e6e9ec;
+}
+#chats div {
+	position: relative;
+	box-sizing: border-box;
+	border-bottom: 1px solid #e6e9ec;
+}
+#chats .search form {
+	width: 340px;
+	height: 36px;
+	margin: 17px auto;
+	padding: 11px 14px;
+	box-sizing: border-box;
+	border: 1px solid #e6e9ec;
+	border-radius: 4px;
+}
+#chats .search input {
+	width: 290px;
+	font-size: 14px;
+	color: #9fa9ba;
+}
+#chats .search button {
+	float: right;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background-image: url("./img/chats-search.png");
+}
+#chats .chat {
+	height: 130px;
+	padding: 15px 30px;
+}
+#chats .chat img {
+	float: left;
+	margin-right: 20px;
+}
+#chats .chat .name {
+	margin-bottom: 6px;
+	font-size: 16px;
+	color: #585d68;
+}
+#chats .chat .source {
+	margin-bottom: 17px;
+	font-size: 14px;
+	color: #b5b5b5;
+}
+#chats .chat .time {
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	font-size: 14px;
+	color: #7f8fa4;
+}
+#chats .chat .content {
+	width: 350px;
+	height: 40px;
+	font-size: 14px;
+	color: #585d68;
+}
+#chats .chat .online {
+	padding-left: 80px;
+	color: #0af;
+	background: url("./img/chats-online.png") no-repeat border-box 65px;
+}
+#chats .chat .notification {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
+#chats .chat .with-notification {
+	width: 310px;
+}
+#chats .chat:hover,
+#chats .chat:active {
+	background: url("./img/chats-highlight.png") no-repeat border-box 0px;
 }

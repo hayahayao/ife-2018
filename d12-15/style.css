@@ -9,7 +9,8 @@ html,
 body {
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: scroll;
 }
 body {
 	display: flex;
@@ -81,7 +82,9 @@ a {
 /* primary 固定宽度100 高度自适应 */
 #primary {
 	position: relative;
+	min-width: 100px;
 	width: 100px;
+	height: 100%;
 	background-color: #1d2531;
 }
 #items {
@@ -126,6 +129,7 @@ a {
 /* secondary 固定宽度250 高度自适应 */
 #secondary {
 	position: relative;
+	min-width: 250px;
 	width: 250px;
 	height: 100%;
 	background-color: #222c3c;
@@ -184,7 +188,8 @@ a {
 }
 #secondary #server {
 	position: fixed;
-	bottom: 0;
+	bottom: 20px;
+	margin-left: 0px;
 	padding: 0 30px;
 	width: 250px;
 	height: 60px;
@@ -226,6 +231,7 @@ a {
 	display: flex;
 	position: relative;
 	width: calc(100% - 100px - 250px);
+	min-width: 900px;
 	background-color: #fff;
 }
 #messages h1 {
@@ -235,19 +241,21 @@ a {
 	font-size: 24px;
 	font-weight: normal;
 	color: #354052;
+	z-index: 2;
 }
 #messages #topbar {
 	position: fixed;
-	width: inherit;
+	width: 100%;
 	height: 80px;
 	box-sizing: border-box;
-	border: 1px solid #e6e9ec;
+	border-bottom: 1px solid #e6e9ec;
 	background-color: #fff;
 	z-index: 1;
 }
 #profile {
-	position: relative;
-	margin-left: calc(100% - 230px);
+	position: fixed;
+	right: 0;
+	top: 0;
 	width: 230px;
 	height: 80px;
 }
@@ -370,6 +378,7 @@ a {
 
 /* open-chat 自适应宽度 最小500 */
 #open-chat {
+	position: relative;
 	min-width: 500px;
 	width: calc(100% - 400px);
 	height: 100%;
@@ -421,7 +430,6 @@ a {
 #chat-top #chats-one-of button:last-of-type {
 	background-image: url("./img/open-right.png");
 }
-
 #chat-top #tools {
 	float: right;
 	height: 70px;
@@ -445,6 +453,7 @@ a {
 #chat-top #tools button:last-of-type {
 	background-image: url("./img/open-trash.png");
 }
+
 #open-chat .message {
 	position: relative;
 	padding: 30px 30px 0px;
@@ -506,7 +515,7 @@ a {
 }
 #open-chat #write-new {
 	height: 54px;
-	margin: 30px 30px 90px;
+	margin: 30px 30px 80px;
 	border: 1px solid #dfe3e9;
 	border-radius: 4px;
 }

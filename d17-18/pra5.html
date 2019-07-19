@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="azurecho">
+    <title>My Resume</title>
+  </head>
+  <body>
+    <h1>简历</h1>
+    <p id="hello"></p>
+    
+    <h2>个人信息</h2>
+    <dl>
+      <dt>姓名</dt>
+        <dd>张三</dd>
+      <dt>电话</dt>
+        <dd>123-0000-0000</dd>
+      <dt>邮箱</dt>
+        <dd>xxxx@xxx.com</dd>
+    </dl>
+    
+    <h2>教育背景</h2>
+    <dl>
+      <dt>学校名称</dt>
+        <dd>百度前端学院</dd>
+      <dt>就读时间</dt>
+        <dd>2019.07</dd>
+      <dt>所学专业</dt>
+        <dd>零基础学院</dt>
+    </dl>
+  
+    <h2>项目经历</h2>
+    <h3>项目A</h3>
+    <dl>
+      <dt>项目时间</dt>
+        <dd>2017.1-2017.8</dd>
+      <dt>项目描述</dt>
+        <dd>在项目A中负责了xxxxx</dd>
+    </dl>
+    <h3>项目B</h3>
+    <dl>
+      <dt>项目时间</dt>
+        <dd>2018.1-2018.8</dd>
+      <dt>项目描述</dt>
+        <dd>在项目B中负责了xxxxx</dd>
+    </dl>
+    
+    <script>
+      function getHello() {
+        var date = new Date();
+        var hour = date.getHours();
+        if (hour >= 6 && hour < 12) {
+          return hour + '上午好';
+        } else if (hour >= 12 && hour < 18) {
+          return hour + '下午好';
+        } else {
+          return hour + '晚上好';
+        }
+      }
+      document.getElementById('hello').innerHTML = getHello();
+    </script>
+
+  </body>
+</html>

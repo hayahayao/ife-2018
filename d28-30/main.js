@@ -5,7 +5,7 @@ document.getElementById('email-input').onkeyup = function () {
 
 document.getElementById('email-sug-wrapper').onclick = function (event) {
 	if (event.target.tagName.toLowerCase() === 'li') {
-		document.getElementById('email-input').value = event.target.innerHTML;
+		document.getElementById('email-input').value = decode(event.target.innerHTML);
 		undisplay();
 	}
 }
@@ -31,14 +31,14 @@ function generateContent () {
 	for (var i = 0; i < postfixList.length; i++) {
 		if (postfixList[i].indexOf(suffix) === 0) {
 			var li = document.createElement('li');
-			li.innerHTML = prefix + '@' + postfixList[i];
+			li.innerHTML = encode(prefix + '@' + postfixList[i]);
 			content.push(li);
 		}
 	}
 	if (content.length === 0) {
 		for (var i = 0; i < postfixList.length; i++) {
 			var li = document.createElement('li');
-			li.innerHTML = prefix + '@' + postfixList[i];
+			li.innerHTML = encode(prefix + '@' + postfixList[i]);
 			content.push(li);
 		}
 	}
@@ -70,4 +70,28 @@ function display () {
 
 function undisplay () {
 	document.getElementById('email-sug-wrapper').style.display = 'none';
+}
+
+function encode (text) {
+	var s = '';
+	if(text.length == 0) return '';
+	s = text.replace(/&/g,'&amp;');
+	s = s.replace(/</g,'&lt;');
+	s = s.replace(/>/g,'&gt;');
+	s = s.replace(/ /g,'&nbsp;');
+	s = s.replace(/\'/g,'&#39;');
+	s = s.replace(/\"/g,'&quot;');
+	return s;
+}
+
+function decode (html) {
+	var s = '';
+	if(html.length == 0) return '';
+	s = html.replace(/&amp;/g,'&');
+	s = s.replace(/&lt;/g,'<');
+	s = s.replace(/&gt;/g,'>');
+	s = s.replace(/&nbsp;/g,' ');
+	s = s.replace(/&#39;/g,'\'');
+	s = s.replace(/&quot;/g,'\"');
+	return s;
 }

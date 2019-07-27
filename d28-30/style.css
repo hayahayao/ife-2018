@@ -1,0 +1,18 @@
+#email-input {
+	width: 160px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#email-sug-wrapper {
+	width: 160px;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+#email-sug-wrapper li {
+
+}
+#email-sug-wrapper li:hover {
+	background-color: #6cf;
+}

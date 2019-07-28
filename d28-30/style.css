@@ -10,9 +10,9 @@
 	margin: 0;
 	list-style-type: none;
 }
-#email-sug-wrapper li {
-
-}
 #email-sug-wrapper li:hover {
-	background-color: #6cf;
+	background-color: #9cf;
+}
+.selected {
+	background-color: #f9c;
 }

@@ -1,4 +1,28 @@
-document.getElementById('email-input').onkeyup = function () {
+var nowSelectTipIndex = 0;
+
+document.getElementById('email-input').onkeyup = function (event) {
+	if (event.keyCode !== 38 && event.keyCode !== 40 && event.keyCode !== 13) {
+		resetSelect();
+	} else {
+		if (event.keyCode === 38) { // up
+			if (nowSelectTipIndex === 0) {
+				nowSelectTipIndex = document.getElementById('email-sug-wrapper').getElementsByTagName('li').length - 1;
+			} else {
+				nowSelectTipIndex -= 1;
+			}
+		}
+		if (event.keyCode === 40) { // down
+			if (nowSelectTipIndex === document.getElementById('email-sug-wrapper').getElementsByTagName('li').length - 1) {
+				nowSelectTipIndex = 0;
+			} else {
+				nowSelectTipIndex += 1;
+			}
+		}
+		if (event.keyCode === 13) { // enter
+			document.getElementById('email-input').value = decode(document.getElementById('email-sug-wrapper').getElementsByTagName('li')[nowSelectTipIndex].innerHTML);
+			undisplay();
+		}
+	}
 	addToContent();
 	displayContent();
 }
@@ -42,6 +66,7 @@ function generateContent () {
 			content.push(li);
 		}
 	}
+	content[nowSelectTipIndex].className = 'selected';
 	return content;
 }
 
@@ -94,4 +119,8 @@ function decode (html) {
 	s = s.replace(/&#39;/g,'\'');
 	s = s.replace(/&quot;/g,'\"');
 	return s;
+}
+
+function resetSelect () {
+	nowSelectTipIndex = 0;
 }

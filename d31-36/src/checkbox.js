@@ -1,4 +1,5 @@
-import { getData, updateTableList } from './table.js';
+import { updateTableList } from './table.js';
+import { drawBar } from './bar.js';
 
 export function generateCheckbox (wrapper, type, arr) {
 	let checkbox = '<input type="checkbox" name="' + type + '" value="all" checkbox-type="all">全选';
@@ -39,6 +40,7 @@ export function generateCheckbox (wrapper, type, arr) {
 				}
 			}
 		}
-		updateTableList(getData());
+		updateTableList();
+		drawBar();
 	}
 }

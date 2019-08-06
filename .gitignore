@@ -1,7 +1,7 @@
 !/d12-15/img/*.png
-/d31-33/node_modules/*
-/d31-33/package.json
-/d31-33/package-lock.json
+/d31-36/node_modules/*
+/d31-36/package.json
+/d31-36/package-lock.json
 *.png
 *.psd
 *.jpg

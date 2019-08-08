@@ -1,6 +1,6 @@
 import { updateTableList } from './table.js';
-import { Bar } from './bar.js';
-import { Line } from './line.js';
+// import { Bar } from './bar.js';
+// import { Line } from './line.js';
 
 export function generateCheckbox (wrapper, type, arr) {
 	let checkbox = '<input type="checkbox" name="' + type + '" value="all" checkbox-type="all">全选';
@@ -42,7 +42,5 @@ export function generateCheckbox (wrapper, type, arr) {
 			}
 		}
 		updateTableList();
-		new Bar().draw();
-		new Line().draw();
-	}
+	};
 }

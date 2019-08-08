@@ -1,39 +1,35 @@
-import { getData } from './data.js';
-
 export function Bar () {};
 
+Bar.prototype.data = [];
+
 Bar.prototype.draw = function () {
-	let datalist = getData();
-	if (datalist.length > 0) {
-		// for (let j = 0; j < datalist.length; j++) {
-			let data = datalist[0].sale;
-			let graph = document.getElementById('bar-graph');
-			const width = 700,
-				  height = 300,
-				  padding = 25,
-				  axisWidth = width - padding * 2,
-				  axisHeight = height - padding * 2,
-				  barGap = 12,
-				  barWidth = (axisWidth - barGap * 13) / 12,
-				  barColor = '#CCCCFF',
-				  axisColor = '#9900CC';
+	let graph = document.getElementById('bar-graph');
+	while (graph.hasChildNodes()) {
+		graph.removeChild(graph.firstChild);
+	}
+	const width = 500,
+		  height = 300,
+		  padding = 25,
+		  axisWidth = width - padding * 2,
+		  axisHeight = height - padding * 2,
+		  barGap = 12,
+		  barWidth = (axisWidth - barGap * 13) / 12,
+		  barColor = '#CCCCFF',
+		  axisColor = '#9900CC';
 
-			graph.setAttribute('width', width);
-			graph.setAttribute('height', height);
+	graph.setAttribute('width', width);
+	graph.setAttribute('height', height);
 
-			let max = Math.max(...data);
-			let rate = axisHeight / max;
-			
-			// graph.appendChild(this.drawText(padding, padding, datalist[j].region + ' ' + datalist[j].product));
+	let max = Math.max(...this.data);
+	let rate = axisHeight / max;
+	
+	// graph.appendChild(this.drawText(padding, padding, datalist[j].region + ' ' + datalist[j].product));
 
-			graph.appendChild(this.drawLine(padding, padding + axisHeight, padding + axisWidth, padding + axisHeight, axisColor));
-			graph.appendChild(this.drawLine(padding, padding, padding, padding + axisHeight, axisColor));
+	graph.appendChild(this.drawLine(padding, padding + axisHeight, padding + axisWidth, padding + axisHeight, axisColor));
+	graph.appendChild(this.drawLine(padding, padding, padding, padding + axisHeight, axisColor));
 
-			for (let i = 0; i < data.length; i++) {
-				graph.appendChild(this.drawRect(padding + barGap * (i + 1) + barWidth * i, padding + axisHeight - data[i] * rate, barWidth, data[i] * rate, barColor));
-			}
-		// 	document.getElementsByTagName('body')[0].appendChild(graph);
-		// // }
+	for (let i = 0; i < this.data.length; i++) {
+		graph.appendChild(this.drawRect(padding + barGap * (i + 1) + barWidth * i, padding + axisHeight - this.data[i] * rate, barWidth, this.data[i] * rate, barColor));
 	}
 };
 
@@ -64,4 +60,8 @@ Bar.prototype.drawText = function (x, y, content) {
 	text.setAttribute('stroke', '#9900CC');
 	text.innerHTML = content;
 	return text;
+};
+
+Bar.prototype.setData = function (data) {
+	this.data = data;
 };

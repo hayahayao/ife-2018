@@ -1,16 +1,34 @@
 import { getData } from './data.js';
+import { Bar } from './bar.js';
+import { Line } from './line.js';
 
 export function updateTableList () {
 	let datalist = getData();
+	let wrapper = document.getElementById('table-wrapper');
 	if (datalist.length > 0) {
-		let div = document.getElementById('table-wrapper');
-		while (div.hasChildNodes()) {
-			div.removeChild(div.firstChild);
+		while (wrapper.hasChildNodes()) {
+			wrapper.removeChild(wrapper.firstChild);
 		}
 		for (let i = 0; i < datalist.length; i++) {
-			div.appendChild(generateTable(datalist[i]));
+			wrapper.appendChild(generateTable(datalist[i]));
 		}
 	}
+
+	wrapper.onmouseover = function (event) {
+		if (event.target.tagName.toLowerCase() === 'table') {
+			let row = event.target.rows[1];
+			let data = [];
+			for (var i = 2; i < row.cells.length; i++) {
+				data.push(parseInt(row.cells[i].innerHTML));
+			}
+			let bar = new Bar();
+			let line = new Line();
+			bar.setData(data);
+			line.setData(data);
+			bar.draw();
+			line.draw();
+		}
+	};	
 }
 
 function generateTable (data) {
